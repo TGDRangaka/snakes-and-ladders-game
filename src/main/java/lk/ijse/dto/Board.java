@@ -1,99 +1,51 @@
-package lk.ijse.Controller;
+package lk.ijse.dto;
 
-import com.jfoenix.controls.JFXButton;
-import com.jfoenix.controls.JFXTextField;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.animation.TranslateTransition;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.Alert;
-import javafx.scene.control.TextField;
-import javafx.scene.paint.Color;
 import javafx.util.Duration;
-import lk.ijse.dto.Piece;
+import lombok.AllArgsConstructor;
+import lombok.Data;
 
-import java.net.URL;
+import java.util.List;
 import java.util.Random;
-import java.util.ResourceBundle;
 
-public class MainWindowFormController implements Initializable {
+@Data
+@AllArgsConstructor
+public class Board {
+    private Integer cellCount;
+    private Integer cellWidth;
+    private Integer laddersCount;
+    private Integer snakesCount;
+    private List<Integer[]> ladderStartEndCells;
+    private List<Integer[]> ladderEndingCellsXY;
+    private List<Integer[]> snakeStartEndCells;
+    private List<Integer[]> snakeEndingCellsXY;
+    private List<Piece> pieces;
 
-    @FXML
-    private JFXButton btn1;
 
-    @FXML
-    private JFXButton btn2;
-
-    @FXML
-    private TextField txtX;
-
-    @FXML
-    private JFXTextField txtCellNum;
-
-    private Integer cellNum = 0;
-
-    private Piece selectedPiece = null;
-    private Piece piece1;
-    private Piece piece2;
-
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        piece1 = new Piece("BLUE", cellNum, btn1);
-        piece2 = new Piece("YELLOW", cellNum, btn2);
-
-        selectedPiece = piece2;
-
-        btn1.setOnAction((e) -> {
-            TranslateTransition transition = new TranslateTransition();
-            transition.setDuration(Duration.seconds(2));
-            transition.setNode(piece1.getPiece());
-//            transition.setAutoReverse(true);
-//            transition.setCycleCount(2);
-            transition.setToX(0);
-            transition.setToY(0);
-
-            transition.play();
-            piece1.setPosition(0);
-        });
-        btn2.setOnAction((e) -> {
-            TranslateTransition transition = new TranslateTransition();
-            transition.setDuration(Duration.seconds(2));
-            transition.setNode(piece2.getPiece());
-//            transition.setAutoReverse(true);
-//            transition.setCycleCount(2);
-            transition.setToX(0);
-            transition.setToY(0);
-
-            transition.play();
-            piece2.setPosition(0);
-        });
-    }
-
-    @FXML
-    void btnRandNumOnAction(ActionEvent event) {
-        if(selectedPiece.equals(piece1)){
-            selectedPiece = piece2;
-        }else {
-            selectedPiece = piece1;
-        }
-
-        Random r = new Random();
-        int randNum = r.nextInt(6) + 1;
-        cellNum = selectedPiece.getPosition();
+    public void movePiece(Piece selectedPiece, int diceNumber) {
+//        if(selectedPiece.equals(piece1)){
+//            selectedPiece = piece2;
+//        }else {
+//            selectedPiece = piece1;
+//        }
+        int cellNum = selectedPiece.getPosition();
+        int randNum = diceNumber;
         int nextCellNum = randNum + cellNum;
-
+        Node node = selectedPiece.getPiece();
+        System.out.println(selectedPiece.getColor() + " --Cell number = " + cellNum);
         //
         boolean isHaveAWinner = nextCellNum == 100;
         boolean isValidMoveInLastRow = 100 - cellNum >= randNum;
-        if(cellNum > 93) {
+        if(cellNum >= 93) {
             if (!isValidMoveInLastRow) {
                 return;
             }
         }
         //calculate next moves
-        System.out.println("--Cell number = " + cellNum);
         int currentRow = cellNum / 10;
         int nextRow = nextCellNum / 10;
         int currentRowMaxCellNum = (cellNum % 10 == 0 && cellNum > 9) ? cellNum : nextRow == currentRow ? (nextRow + 1) * 10 : nextRow * 10;
@@ -120,15 +72,15 @@ public class MainWindowFormController implements Initializable {
         int lastMoveDuration = nextRowMoves * 333;
 
         if(row == 0 || row == 2 || row == 4 || row == 6 || row == 8){
-            moveLeft(currentRowMoves == 0 ? 0 : firstMove, currentRowMoves * 333);
+            moveLeft(currentRowMoves == 0 ? 0 : firstMove, currentRowMoves * 333, node);
 
             if(isHaveUpMove) {
                 Timeline timeline1 = new Timeline(new KeyFrame(Duration.millis(duration), e -> {
-                    moveUp(nextRow);
+                    moveUp(nextRow, node);
 
                     if(isHaveNextRowMoves) {
                         Timeline timeline2 = new Timeline(new KeyFrame(Duration.millis(333), ev -> {
-                            moveRight(lastMove, lastMoveDuration);
+                            moveRight(lastMove, lastMoveDuration, node);
                         }));
                         timeline2.play();
                     }
@@ -137,15 +89,15 @@ public class MainWindowFormController implements Initializable {
                 timeline1.play();
             }
         }else{
-            moveRight(currentRowMoves == 0 ? 0 : firstMove, currentRowMoves * 333);
+            moveRight(currentRowMoves == 0 ? 0 : firstMove, currentRowMoves * 333, node);
 
             if(isHaveUpMove) {
                 Timeline timeline1 = new Timeline(new KeyFrame(Duration.millis(duration), e -> {
-                    moveUp(nextRow);
+                    moveUp(nextRow, node);
 
                     if(isHaveNextRowMoves) {
                         Timeline timeline2 = new Timeline(new KeyFrame(Duration.millis(333), ev -> {
-                            moveLeft(lastMove, lastMoveDuration);
+                            moveLeft(lastMove, lastMoveDuration, node);
                         }));
                         timeline2.play();
                     }
@@ -155,62 +107,46 @@ public class MainWindowFormController implements Initializable {
             }
         }
 
-        cellNum += randNum;
-        selectedPiece.setPosition(cellNum);
+        selectedPiece.setPosition(nextCellNum);
         System.out.println("\t"+ selectedPiece.toString());
-        txtX.setText(String.valueOf(randNum));
-        txtCellNum.setText(String.valueOf(cellNum));
 
         if(isHaveAWinner){
             new Alert(Alert.AlertType.CONFIRMATION, "Win -- " + selectedPiece.getColor()).show();
         }
     }
 
-    void moveLeft(int cellsCount, int duration){
+    private void moveLeft(int cellsCount, int duration, Node node){
         if(cellsCount == 0) return;
         TranslateTransition transition = new TranslateTransition();
         transition.setDuration(Duration.millis(duration));
-        transition.setNode(selectedPiece.getPiece());
-        int x = 55 * cellsCount;
+        transition.setNode(node);
+        int x = cellWidth * cellsCount;
         transition.setToX(-x);
 
         transition.play();
         System.out.println("Moved Left -- " + duration);
     }
 
-    void moveRight(int cellsCount, int duration){
+    private void moveRight(int cellsCount, int duration, Node node){
         if(cellsCount == 0) return;
         TranslateTransition transition = new TranslateTransition();
         transition.setDuration(Duration.millis(duration));
-        transition.setNode(selectedPiece.getPiece());
-        int x = 55 * (11 - cellsCount);
+        transition.setNode(node);
+        int x = cellWidth * (11 - cellsCount);
         transition.setToX(-x);
 
         transition.play();
         System.out.println("Moved Right-- " + duration);
     }
 
-    void moveUp(int row){
+    private void moveUp(int row, Node node){
         TranslateTransition transition = new TranslateTransition();
         transition.setDuration(Duration.millis(333));
-        transition.setNode(selectedPiece.getPiece());
-        int y = 55 * row;
+        transition.setNode(node);
+        int y = cellWidth * row;
         transition.setToY(-y);
 
         transition.play();
         System.out.println("Moved Up");
     }
-
-    void moveDown(int cellsCount){
-        TranslateTransition transition = new TranslateTransition();
-        transition.setDuration(Duration.seconds(2));
-        transition.setNode(selectedPiece.getPiece());
-//            transition.setAutoReverse(true);
-//            transition.setCycleCount(2);
-        int y = 55 * cellsCount - 55;
-        transition.setToY(y);
-
-        transition.play();
-    }
-
 }

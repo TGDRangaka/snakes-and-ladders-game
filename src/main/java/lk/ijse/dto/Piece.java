@@ -8,7 +8,7 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class Piece {
-    private Color color;
+    private String color;
     private Integer position;
     private Node piece;
 }
