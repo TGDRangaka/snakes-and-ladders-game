@@ -1,127 +1,443 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controller.Board1FormController">
+<AnchorPane maxHeight="700.0" prefHeight="700.0" prefWidth="1280.0" style="-fx-background-color: #39695d;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controller.Board1FormController">
    <children>
-      <FlowPane layoutX="157.0" layoutY="24.0" prefHeight="552.0" prefWidth="552.0" style="-fx-border-color: black;" AnchorPane.rightAnchor="62.0" AnchorPane.topAnchor="24.0">
+      <FlowPane layoutX="187.0" layoutY="15.0" prefHeight="682.0" prefWidth="682.0" style="-fx-border-color: black;" AnchorPane.rightAnchor="286.0" AnchorPane.topAnchor="10.0">
          <children>
-            <Label alignment="CENTER" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="Label" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="11.0" layoutY="11.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="Label" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="66.0" layoutY="11.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="Label" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="121.0" layoutY="11.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="Label" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="176.0" layoutY="11.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="Label" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="231.0" layoutY="11.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="Label" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="286.0" layoutY="11.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="Label" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="341.0" layoutY="11.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="Label" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="396.0" layoutY="11.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="Label" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="451.0" layoutY="11.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="Label" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="506.0" layoutY="11.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="Label" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="11.0" layoutY="66.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="Label" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="66.0" layoutY="66.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="Label" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="121.0" layoutY="66.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="Label" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="176.0" layoutY="66.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="Label" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="231.0" layoutY="66.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="Label" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="286.0" layoutY="66.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="Label" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="341.0" layoutY="66.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="Label" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="396.0" layoutY="66.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="Label" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="451.0" layoutY="66.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="Label" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="506.0" layoutY="66.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="Label" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="11.0" layoutY="121.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="Label" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="66.0" layoutY="121.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="Label" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="121.0" layoutY="121.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="Label" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="176.0" layoutY="121.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="Label" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="231.0" layoutY="121.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="Label" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="286.0" layoutY="121.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="Label" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="341.0" layoutY="121.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="Label" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="396.0" layoutY="121.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="Label" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="451.0" layoutY="121.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="Label" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="506.0" layoutY="121.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="Label" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="11.0" layoutY="176.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="Label" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="66.0" layoutY="176.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="Label" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="121.0" layoutY="176.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="Label" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="176.0" layoutY="176.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="Label" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="231.0" layoutY="176.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="Label" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="286.0" layoutY="176.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="Label" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="341.0" layoutY="176.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="Label" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="396.0" layoutY="176.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="Label" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="451.0" layoutY="176.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="Label" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="506.0" layoutY="176.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="Label" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="11.0" layoutY="231.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="Label" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="66.0" layoutY="231.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="Label" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="121.0" layoutY="231.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="Label" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="176.0" layoutY="231.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="Label" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="231.0" layoutY="231.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="Label" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="286.0" layoutY="231.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="Label" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="341.0" layoutY="231.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="Label" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="396.0" layoutY="231.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="Label" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="451.0" layoutY="231.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="Label" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="506.0" layoutY="231.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="Label" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="11.0" layoutY="286.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="Label" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="66.0" layoutY="286.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="Label" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="121.0" layoutY="286.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="Label" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="176.0" layoutY="286.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="Label" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="231.0" layoutY="286.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="Label" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="286.0" layoutY="286.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="Label" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="341.0" layoutY="286.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="Label" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="396.0" layoutY="286.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="Label" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="451.0" layoutY="286.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="Label" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="506.0" layoutY="286.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="31" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="11.0" layoutY="341.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="32" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="66.0" layoutY="341.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="33" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="121.0" layoutY="341.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="34" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="176.0" layoutY="341.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="35" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="231.0" layoutY="341.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="36" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="286.0" layoutY="341.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="37" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="341.0" layoutY="341.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="38" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="396.0" layoutY="341.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="39" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="451.0" layoutY="341.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="40" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="506.0" layoutY="341.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="30" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="11.0" layoutY="396.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="29" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="66.0" layoutY="396.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="28" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="121.0" layoutY="396.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="27" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="176.0" layoutY="396.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="26" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="231.0" layoutY="396.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="25" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="286.0" layoutY="396.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="24" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="341.0" layoutY="396.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="23" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="396.0" layoutY="396.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="22" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="451.0" layoutY="396.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="21" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="506.0" layoutY="396.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="11" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="11.0" layoutY="451.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="12" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="66.0" layoutY="451.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="13" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="121.0" layoutY="451.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="14" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="176.0" layoutY="451.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="15" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="231.0" layoutY="451.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="16" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="286.0" layoutY="451.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="17" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="341.0" layoutY="451.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="18" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="396.0" layoutY="451.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="19" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="451.0" layoutY="451.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="20" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="506.0" layoutY="451.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="10" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="11.0" layoutY="506.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="9" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="66.0" layoutY="506.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="8" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="121.0" layoutY="506.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="7" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="176.0" layoutY="506.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="6" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="231.0" layoutY="506.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="5" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="286.0" layoutY="506.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="4" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="341.0" layoutY="506.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="3" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="396.0" layoutY="506.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="2" textFill="#5e5e5e" />
-            <Label alignment="CENTER" layoutX="451.0" layoutY="506.0" prefHeight="55.0" prefWidth="55.0" style="-fx-border-color: gold;" text="1" textFill="#5e5e5e" />
+            <Label alignment="TOP_LEFT" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #FFE846;" stylesheets="@../styles/labels.css" text="91" textFill="#5e5e5e">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="11.0" layoutY="11.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #CD7A6F;" stylesheets="@../styles/labels.css" text="92" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="66.0" layoutY="11.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #37B783;" stylesheets="@../styles/labels.css" text="93" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="121.0" layoutY="11.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #D68ADF;" stylesheets="@../styles/labels.css" text="94" textFill="#5e5e5e">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="176.0" layoutY="11.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #5B81BB;" stylesheets="@../styles/labels.css" text="95" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="231.0" layoutY="11.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #CD7A6F;" stylesheets="@../styles/labels.css" text="96" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="286.0" layoutY="11.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #D68ADF;" stylesheets="@../styles/labels.css" text="97" textFill="#5e5e5e">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="341.0" layoutY="11.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #37B783;" stylesheets="@../styles/labels.css" text="98" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="396.0" layoutY="11.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #5B81BB;" stylesheets="@../styles/labels.css" text="99" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="451.0" layoutY="11.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #FFE846;" stylesheets="@../styles/labels.css" text="100" textFill="#5e5e5e">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="506.0" layoutY="11.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #CD7A6F;" stylesheets="@../styles/labels.css" text="90" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="11.0" layoutY="66.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #D68ADF;" stylesheets="@../styles/labels.css" text="89" textFill="#5e5e5e">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="66.0" layoutY="66.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #5B81BB;" stylesheets="@../styles/labels.css" text="88" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="121.0" layoutY="66.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #FF5670;" stylesheets="@../styles/labels.css" text="87" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="176.0" layoutY="66.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #37B783;" stylesheets="@../styles/labels.css" text="86" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="231.0" layoutY="66.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #FFE846;" stylesheets="@../styles/labels.css" text="85" textFill="#5e5e5e">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="286.0" layoutY="66.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #5B81BB;" stylesheets="@../styles/labels.css" text="84" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="341.0" layoutY="66.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #CD7A6F;" stylesheets="@../styles/labels.css" text="83" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="396.0" layoutY="66.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #37B783;" stylesheets="@../styles/labels.css" text="82" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="451.0" layoutY="66.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #FF5670;" stylesheets="@../styles/labels.css" text="81" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="506.0" layoutY="66.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #5B81BB;" stylesheets="@../styles/labels.css" text="71" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="11.0" layoutY="121.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #37B783;" stylesheets="@../styles/labels.css" text="72" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="66.0" layoutY="121.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #CD7A6F;" stylesheets="@../styles/labels.css" text="73" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="121.0" layoutY="121.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #FFE846;" stylesheets="@../styles/labels.css" text="74" textFill="#5e5e5e">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="176.0" layoutY="121.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #5B81BB;" stylesheets="@../styles/labels.css" text="75" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="231.0" layoutY="121.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #37B783;" stylesheets="@../styles/labels.css" text="76" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="286.0" layoutY="121.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #D68ADF;" stylesheets="@../styles/labels.css" text="77" textFill="#5e5e5e">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="341.0" layoutY="121.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #CD7A6F;" stylesheets="@../styles/labels.css" text="78" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="396.0" layoutY="121.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #5B81BB;" stylesheets="@../styles/labels.css" text="79" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="451.0" layoutY="121.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #FFE846;" stylesheets="@../styles/labels.css" text="80" textFill="#5e5e5e">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="506.0" layoutY="121.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #FFE846;" stylesheets="@../styles/labels.css" text="70" textFill="#5e5e5e">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="11.0" layoutY="176.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #5B81BB;" stylesheets="@../styles/labels.css" text="69" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="66.0" layoutY="176.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #D68ADF;" stylesheets="@../styles/labels.css" text="68" textFill="#5e5e5e">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="121.0" layoutY="176.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #37B783;" stylesheets="@../styles/labels.css" text="67" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="176.0" layoutY="176.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #FF5670;" stylesheets="@../styles/labels.css" text="66" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="231.0" layoutY="176.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #CD7A6F;" stylesheets="@../styles/labels.css" text="65" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="286.0" layoutY="176.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #5B81BB;" stylesheets="@../styles/labels.css" text="64" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="341.0" layoutY="176.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #FFE846;" stylesheets="@../styles/labels.css" text="63" textFill="#5e5e5e">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="396.0" layoutY="176.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #37B783;" stylesheets="@../styles/labels.css" text="62" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="451.0" layoutY="176.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #D68ADF;" stylesheets="@../styles/labels.css" text="61" textFill="#5e5e5e">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="506.0" layoutY="176.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #37B783;" stylesheets="@../styles/labels.css" text="51" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="11.0" layoutY="231.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #FF5670;" stylesheets="@../styles/labels.css" text="52" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="66.0" layoutY="231.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #CD7A6F;" stylesheets="@../styles/labels.css" text="53" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="121.0" layoutY="231.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #5B81BB;" stylesheets="@../styles/labels.css" text="54" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="176.0" layoutY="231.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #37B783;" stylesheets="@../styles/labels.css" text="55" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="231.0" layoutY="231.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #FFE846;" stylesheets="@../styles/labels.css" text="56" textFill="#5e5e5e">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="286.0" layoutY="231.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #CD7A6F;" stylesheets="@../styles/labels.css" text="57" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="341.0" layoutY="231.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #D68ADF;" stylesheets="@../styles/labels.css" text="58" textFill="#5e5e5e">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="396.0" layoutY="231.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #5B81BB;" stylesheets="@../styles/labels.css" text="59" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="451.0" layoutY="231.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #FFE846;" stylesheets="@../styles/labels.css" text="60" textFill="#5e5e5e">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="506.0" layoutY="231.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #5B81BB;" stylesheets="@../styles/labels.css" text="50" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="11.0" layoutY="286.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #D68ADF;" stylesheets="@../styles/labels.css" text="49" textFill="#5e5e5e">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="66.0" layoutY="286.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #FFE846;" stylesheets="@../styles/labels.css" text="48" textFill="#5e5e5e">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="121.0" layoutY="286.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #CD7A6F;" stylesheets="@../styles/labels.css" text="47" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="176.0" layoutY="286.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #D68ADF;" stylesheets="@../styles/labels.css" text="46" textFill="#5e5e5e">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="231.0" layoutY="286.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #5B81BB;" stylesheets="@../styles/labels.css" text="45" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="286.0" layoutY="286.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #FFE846;" stylesheets="@../styles/labels.css" text="44" textFill="#5e5e5e">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="341.0" layoutY="286.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #37B783;" stylesheets="@../styles/labels.css" text="43" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="396.0" layoutY="286.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #FF5670;" stylesheets="@../styles/labels.css" text="42" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="451.0" layoutY="286.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #CD7A6F;" stylesheets="@../styles/labels.css" text="41" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="506.0" layoutY="286.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #D68ADF;" stylesheets="@../styles/labels.css" text="31" textFill="#5e5e5e">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="11.0" layoutY="341.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #CD7A6F;" stylesheets="@../styles/labels.css" text="32" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="66.0" layoutY="341.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #37B783;" stylesheets="@../styles/labels.css" text="33" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="121.0" layoutY="341.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #FFE846;" stylesheets="@../styles/labels.css" text="34" textFill="#5e5e5e">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="176.0" layoutY="341.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #CD7A6F;" stylesheets="@../styles/labels.css" text="35" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="231.0" layoutY="341.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #FF5670;" stylesheets="@../styles/labels.css" text="36" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="286.0" layoutY="341.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #D68ADF;" stylesheets="@../styles/labels.css" text="37" textFill="#5e5e5e">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="341.0" layoutY="341.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #CD7A6F;" stylesheets="@../styles/labels.css" text="38" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="396.0" layoutY="341.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #FFE846;" stylesheets="@../styles/labels.css" text="39" textFill="#5e5e5e">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="451.0" layoutY="341.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #37B783;" stylesheets="@../styles/labels.css" text="40" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="506.0" layoutY="341.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #FFE846;" stylesheets="@../styles/labels.css" text="30" textFill="#5e5e5e">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="11.0" layoutY="396.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #FF5670;" stylesheets="@../styles/labels.css" text="29" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="66.0" layoutY="396.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #5B81BB;" stylesheets="@../styles/labels.css" text="28" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="121.0" layoutY="396.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #37B783;" stylesheets="@../styles/labels.css" text="27" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="176.0" layoutY="396.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #CD7A6F;" stylesheets="@../styles/labels.css" text="26" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="231.0" layoutY="396.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #5B81BB;" stylesheets="@../styles/labels.css" text="25" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="286.0" layoutY="396.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #37B783;" stylesheets="@../styles/labels.css" text="24" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="341.0" layoutY="396.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #FF5670;" stylesheets="@../styles/labels.css" text="23" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="396.0" layoutY="396.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #D68ADF;" stylesheets="@../styles/labels.css" text="22" textFill="#5e5e5e">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="451.0" layoutY="396.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #FF5670;" stylesheets="@../styles/labels.css" text="21" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="506.0" layoutY="396.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #D68ADF;" stylesheets="@../styles/labels.css" text="11" textFill="#5e5e5e">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="11.0" layoutY="451.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #CD7A6F;" stylesheets="@../styles/labels.css" text="12" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="66.0" layoutY="451.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #FFE846;" stylesheets="@../styles/labels.css" text="13" textFill="#5e5e5e">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="121.0" layoutY="451.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #5B81BB;" stylesheets="@../styles/labels.css" text="14" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="176.0" layoutY="451.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #D68ADF;" stylesheets="@../styles/labels.css" text="15" textFill="#5e5e5e">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="231.0" layoutY="451.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #37B783;" stylesheets="@../styles/labels.css" text="16" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="286.0" layoutY="451.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #FF5670;" stylesheets="@../styles/labels.css" text="17" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="341.0" layoutY="451.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #5B81BB;" stylesheets="@../styles/labels.css" text="18" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="396.0" layoutY="451.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #37B783;" stylesheets="@../styles/labels.css" text="19" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="451.0" layoutY="451.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #FFE846;" stylesheets="@../styles/labels.css" text="20" textFill="#5e5e5e">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="506.0" layoutY="451.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #37B783;" stylesheets="@../styles/labels.css" text="10" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="11.0" layoutY="506.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #5B81BB;" stylesheets="@../styles/labels.css" text="9" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="66.0" layoutY="506.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #D68ADF;" stylesheets="@../styles/labels.css" text="8" textFill="#5e5e5e">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="121.0" layoutY="506.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #CD7A6F;" stylesheets="@../styles/labels.css" text="7" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="176.0" layoutY="506.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #37B783;" stylesheets="@../styles/labels.css" text="6" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="231.0" layoutY="506.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #5B81BB;" stylesheets="@../styles/labels.css" text="5" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="286.0" layoutY="506.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #CD7A6F;" stylesheets="@../styles/labels.css" text="4" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="341.0" layoutY="506.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #FFE846;" stylesheets="@../styles/labels.css" text="3" textFill="#5e5e5e">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="396.0" layoutY="506.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #D68ADF;" stylesheets="@../styles/labels.css" text="2" textFill="#5e5e5e">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
+            <Label alignment="TOP_LEFT" layoutX="451.0" layoutY="506.0" prefHeight="68.0" prefWidth="68.0" style="-fx-background-color: #37B783;" stylesheets="@../styles/labels.css" text="1" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding></Label>
          </children>
       </FlowPane>
-      <JFXButton fx:id="btn4" layoutX="715.0" layoutY="527.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: lightgreen; -fx-background-radius: 50%; -fx-border-color: black; -fx-border-radius: 50%;" />
-      <JFXButton fx:id="btn3" layoutX="715.0" layoutY="528.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: pink; -fx-background-radius: 50%; -fx-border-color: black; -fx-border-radius: 50%;" />
-      <JFXButton fx:id="btn2" layoutX="715.0" layoutY="528.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: yellow; -fx-background-radius: 50%; -fx-border-color: black; -fx-border-radius: 50%;" />
-      <JFXButton fx:id="btn1" layoutX="715.0" layoutY="527.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: lightblue; -fx-background-radius: 50%; -fx-border-color: black; -fx-border-radius: 50%;" />
-      <TextField fx:id="txtX" alignment="CENTER" layoutX="51.0" layoutY="262.0" prefHeight="77.0" prefWidth="77.0" text="1">
+      <TextField fx:id="txtX" alignment="CENTER" layoutX="72.0" layoutY="189.0" prefHeight="162.0" prefWidth="162.0" text="1">
          <font>
-            <Font size="36.0" />
+            <Font name="System Bold" size="73.0" />
          </font></TextField>
-      <Button layoutX="58.0" layoutY="348.0" mnemonicParsing="false" onAction="#btnRollDiceOnAction" text="Roll Dice" />
+      <Button layoutX="112.0" layoutY="365.0" mnemonicParsing="false" onAction="#btnRollDiceOnAction" prefHeight="29.0" prefWidth="83.0" style="-fx-background-color: yellow;" text="Roll Dice">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></Button>
+      <Pane layoutX="302.0" layoutY="2.0" prefHeight="697.0" prefWidth="703.0">
+         <children>
+            <ImageView fitHeight="693.0" fitWidth="693.0" layoutX="5.0" layoutY="2.0">
+               <image>
+                  <Image url="@../img/snakesAndLadders.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <JFXButton fx:id="btn4" layoutX="1007.0" layoutY="637.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: lightgreen; -fx-background-radius: 50%; -fx-border-color: black; -fx-border-radius: 50%;" />
+      <JFXButton fx:id="btn3" layoutX="1007.0" layoutY="638.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: pink; -fx-background-radius: 50%; -fx-border-color: black; -fx-border-radius: 50%;" />
+      <JFXButton fx:id="btn2" layoutX="1007.0" layoutY="638.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: yellow; -fx-background-radius: 50%; -fx-border-color: black; -fx-border-radius: 50%;" />
+      <JFXButton fx:id="btn1" layoutX="1007.0" layoutY="637.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: lightblue; -fx-background-radius: 50%; -fx-border-color: black; -fx-border-radius: 50%;" />
    </children>
 </AnchorPane>

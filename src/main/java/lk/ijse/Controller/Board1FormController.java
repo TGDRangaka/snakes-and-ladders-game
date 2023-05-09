@@ -38,7 +38,6 @@ public class Board1FormController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        System.out.println("in board 1 ini...");
         Piece piece1 = new Piece("BLUE", 0, btn1);
         Piece piece2 = new Piece("YELLOW", 0, btn2);
         Piece piece3 = new Piece("PINK", 0, btn3);
@@ -51,17 +50,8 @@ public class Board1FormController implements Initializable {
         pieces.add(piece4);
         selectedPiece = pieces.get(pieces.size() - 1);
 
-        board = new Board(
-                100,
-                55,
-                0,
-                0,
-                null,
-                null,
-                null,
-                null,
-                pieces
-        );
+        board = createBoard();
+
     }
 
     @FXML
@@ -82,5 +72,41 @@ public class Board1FormController implements Initializable {
         }
 
         board.movePiece(selectedPiece, diceNumber);
+    }
+
+    private Board createBoard() {
+        Integer[] ladderStartCells = new Integer[]{20,26,34,58};
+        Integer[] ladderEndingCells = new Integer[]{42,56,73,79};
+        List<Integer[]> ladderEndingCellsXY = new ArrayList<>();
+        ladderEndingCellsXY.add(new Integer[]{136, 272});
+        ladderEndingCellsXY.add(new Integer[]{340, 340});
+        ladderEndingCellsXY.add(new Integer[]{544, 476});
+        ladderEndingCellsXY.add(new Integer[]{136, 476});
+
+        Integer[] snakesStartCells = new Integer[]{32, 52, 61, 85, 93, 98};
+        Integer[] snakesEndingCells = new Integer[]{12, 7, 38, 66, 67, 16};
+        List<Integer[]> snakesEndingCellsXY = new ArrayList<>();
+        snakesEndingCellsXY.add(new Integer[]{612, 68});
+        snakesEndingCellsXY.add(new Integer[]{476, 0});
+        snakesEndingCellsXY.add(new Integer[]{204, 204});
+        snakesEndingCellsXY.add(new Integer[]{408, 408});
+        snakesEndingCellsXY.add(new Integer[]{476, 408});
+        snakesEndingCellsXY.add(new Integer[]{340, 68});
+
+        Board board = new Board(
+                100,
+                68,
+                4,
+                6,
+                ladderStartCells,
+                ladderEndingCells,
+                ladderEndingCellsXY,
+                snakesStartCells,
+                snakesEndingCells,
+                snakesEndingCellsXY,
+                pieces
+        );
+
+        return board;
     }
 }
