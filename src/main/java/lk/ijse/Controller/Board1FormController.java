@@ -34,24 +34,19 @@ public class Board1FormController implements Initializable {
 
     private Piece selectedPiece;
 
+    private int playerCount;
+
     List<Piece> pieces;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        Piece piece1 = new Piece("BLUE", 0, btn1);
-        Piece piece2 = new Piece("YELLOW", 0, btn2);
-        Piece piece3 = new Piece("PINK", 0, btn3);
-        Piece piece4 = new Piece("GREEN", 0, btn4);
+        btn1.setDisable(true);
+        btn2.setDisable(true);
+        btn3.setDisable(true);
+        btn4.setDisable(true);
+
 
         pieces = new ArrayList<>();
-        pieces.add(piece1);
-        pieces.add(piece2);
-        pieces.add(piece3);
-        pieces.add(piece4);
-        selectedPiece = pieces.get(pieces.size() - 1);
-
-        board = createBoard();
-
     }
 
     @FXML
@@ -108,5 +103,23 @@ public class Board1FormController implements Initializable {
         );
 
         return board;
+    }
+
+    public void setPlayerCount(int playersCount) {
+        System.out.println("Players Count = " + playersCount);
+        this.playerCount = playersCount;
+
+        Piece piece1 = new Piece("BLUE", 0, btn1);
+        Piece piece2 = new Piece("YELLOW", 0, btn2);
+        Piece piece3 = new Piece("PINK", 0, btn3);
+        Piece piece4 = new Piece("GREEN", 0, btn4);
+
+        switch (playerCount){
+            case 4 : pieces.add(piece4); btn4.setDisable(false);
+            case 3 : pieces.add(piece3); btn3.setDisable(false);
+            case 2 : pieces.add(piece1);pieces.add(piece2); btn1.setDisable(false); btn2.setDisable(false);
+        }
+        selectedPiece = pieces.get(pieces.size() - 1);
+        board = createBoard();
     }
 }

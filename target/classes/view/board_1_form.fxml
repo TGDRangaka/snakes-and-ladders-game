@@ -418,13 +418,13 @@
                </padding></Label>
          </children>
       </FlowPane>
-      <TextField fx:id="txtX" alignment="CENTER" layoutX="72.0" layoutY="189.0" prefHeight="162.0" prefWidth="162.0" text="1">
+      <TextField fx:id="txtX" alignment="CENTER" focusTraversable="false" layoutX="72.0" layoutY="189.0" prefHeight="162.0" prefWidth="162.0" style="-fx-background-radius: 50%;">
          <font>
             <Font name="System Bold" size="73.0" />
          </font></TextField>
-      <Button layoutX="112.0" layoutY="365.0" mnemonicParsing="false" onAction="#btnRollDiceOnAction" prefHeight="29.0" prefWidth="83.0" style="-fx-background-color: yellow;" text="Roll Dice">
+      <Button focusTraversable="false" layoutX="72.0" layoutY="385.0" mnemonicParsing="false" onAction="#btnRollDiceOnAction" prefHeight="48.0" prefWidth="162.0" style="-fx-background-color: yellow; -fx-background-radius: 20;" text="Roll Dice">
          <font>
-            <Font name="System Bold Italic" size="12.0" />
+            <Font name="System Bold Italic" size="22.0" />
          </font></Button>
       <Pane layoutX="302.0" layoutY="2.0" prefHeight="697.0" prefWidth="703.0">
          <children>
@@ -439,5 +439,15 @@
       <JFXButton fx:id="btn3" layoutX="1007.0" layoutY="638.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: pink; -fx-background-radius: 50%; -fx-border-color: black; -fx-border-radius: 50%;" />
       <JFXButton fx:id="btn2" layoutX="1007.0" layoutY="638.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: yellow; -fx-background-radius: 50%; -fx-border-color: black; -fx-border-radius: 50%;" />
       <JFXButton fx:id="btn1" layoutX="1007.0" layoutY="637.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: lightblue; -fx-background-radius: 50%; -fx-border-color: black; -fx-border-radius: 50%;" />
+      <Label alignment="CENTER" layoutX="994.0" layoutY="321.0" prefHeight="58.0" prefWidth="287.0" text="Blue's Turn" textFill="#fffaa4">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="200.0" fitWidth="187.0" layoutX="43.0" layoutY="157.0">
+         <image>
+            <Image url="@../img/diceRolling.gif" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
