@@ -1,21 +1,32 @@
 package lk.ijse.Controller;
 
 import com.jfoenix.controls.JFXButton;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.control.TextField;
+import javafx.scene.Node;
+import javafx.scene.control.*;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
+import javafx.util.Duration;
 import lk.ijse.dto.Board;
 import lk.ijse.dto.Piece;
 
+import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-import java.util.ResourceBundle;
+import java.util.*;
 
 public class Board1FormController implements Initializable {
     public static Board board;
+    @FXML
+    private AnchorPane root;
+
+    @FXML
+    private JFXButton btnRollDice;
 
     @FXML
     private JFXButton btn4;
@@ -32,7 +43,21 @@ public class Board1FormController implements Initializable {
     @FXML
     private TextField txtX;
 
+    @FXML
+    private ImageView imgDiceRolling;
+
+    @FXML
+    private ImageView imgWinner;
+
+    @FXML
+    private Label lblWins;
+
+    @FXML
+    private Label lblTurn;
+
     private Piece selectedPiece;
+
+    private String winner;
 
     private int playerCount;
 
@@ -40,10 +65,10 @@ public class Board1FormController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        btn1.setDisable(true);
-        btn2.setDisable(true);
-        btn3.setDisable(true);
-        btn4.setDisable(true);
+        btn1.setVisible(false);
+        btn2.setVisible(false);
+        btn3.setVisible(false);
+        btn4.setVisible(false);
 
 
         pieces = new ArrayList<>();
@@ -51,10 +76,39 @@ public class Board1FormController implements Initializable {
 
     @FXML
     void btnRollDiceOnAction(ActionEvent event) {
+        btnRollDice.setDisable(true);
+        txtX.setText(null);
         Random r = new Random();
         int diceNumber = r.nextInt(6) + 1;
-        txtX.setText(String.valueOf(diceNumber));
 
+        imgDiceRolling.setImage(new Image("/img/diceRolling.gif"));
+        selectPiece();
+
+        Timeline timeline = new Timeline(new KeyFrame(Duration.millis(2100), ev -> {
+            imgDiceRolling.setImage(null);
+            txtX.setText(String.valueOf(diceNumber));
+            winner = board.movePiece(selectedPiece, diceNumber);
+
+            if(winner != null){
+                showWinner(winner);
+                return;
+            }
+
+            updateWhosTurnLbl();
+
+            btnRollDice.setDisable(false);
+        }));
+        timeline.play();
+    }
+
+    private void showWinner(String winner) {
+        System.out.println("winner === " + winner);
+        lblTurn.setText(winner);
+        lblWins.setText("Wins!");
+        imgWinner.setImage(new Image("/img/winnerGif.gif"));
+    }
+
+    private void selectPiece() {
         for (int i = 0; i < pieces.size(); i++) {
             if (selectedPiece == pieces.get(i)){
                 try {
@@ -65,8 +119,21 @@ public class Board1FormController implements Initializable {
                 break;
             }
         }
+    }
 
-        board.movePiece(selectedPiece, diceNumber);
+    private void updateWhosTurnLbl() {
+        String color = null;
+        for (int i = 0; i < pieces.size(); i++) {
+            if (selectedPiece == pieces.get(i)){
+                try {
+                    color = pieces.get(i + 1).getColor();
+                }catch (IndexOutOfBoundsException exception){
+                    color = pieces.get(0).getColor();
+                }
+                break;
+            }
+        }
+        lblTurn.setText(color + "'s Turn");
     }
 
     private Board createBoard() {
@@ -115,11 +182,17 @@ public class Board1FormController implements Initializable {
         Piece piece4 = new Piece("GREEN", 0, btn4);
 
         switch (playerCount){
-            case 4 : pieces.add(piece4); btn4.setDisable(false);
-            case 3 : pieces.add(piece3); btn3.setDisable(false);
-            case 2 : pieces.add(piece1);pieces.add(piece2); btn1.setDisable(false); btn2.setDisable(false);
+            case 4 : pieces.add(piece4); btn4.setVisible(true);
+            case 3 : pieces.add(piece3); btn3.setVisible(true);
+            case 2 : pieces.add(piece1);pieces.add(piece2); btn1.setVisible(true); btn2.setVisible(true);
         }
         selectedPiece = pieces.get(pieces.size() - 1);
         board = createBoard();
+    }
+
+    @FXML
+    void btnBackOnAction(ActionEvent event) throws IOException {
+        Node node = FXMLLoader.load(getClass().getResource("/view/main_window_form.fxml"));
+        root.getChildren().setAll(node);
     }
 }

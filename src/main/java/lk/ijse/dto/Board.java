@@ -29,7 +29,7 @@ public class Board {
     private List<Piece> pieces;
 
 
-    public void movePiece(Piece selectedPiece, int diceNumber) {
+    public String movePiece(Piece selectedPiece, int diceNumber) {
 //        if(selectedPiece.equals(piece1)){
 //            selectedPiece = piece2;
 //        }else {
@@ -45,7 +45,7 @@ public class Board {
         boolean isValidMoveInLastRow = 100 - cellNum >= randNum;
         if(cellNum >= 93) {
             if (!isValidMoveInLastRow) {
-                return;
+                return null;
             }
         }
         //calculate next moves
@@ -142,6 +142,8 @@ public class Board {
         if(isHaveAWinner){
             new Alert(Alert.AlertType.CONFIRMATION, "Win -- " + selectedPiece.getColor()).show();
         }
+
+        return isHaveAWinner ? selectedPiece.getColor() : null;
     }
 
     private void movePiece(Integer[] xy, Node node){
